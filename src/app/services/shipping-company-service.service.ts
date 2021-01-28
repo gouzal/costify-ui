@@ -8,7 +8,7 @@ import { ShippingCompanyModel } from '../models/ShippingCompanyModel';
 export class ShippingCompanyServiceService {
 
   constructor(private http: HttpClient) {}
-  getCarsSmall() {
+  getShippingCompanies() {
     return this.http.get('/src/data/shippingcompanies.json')
                 .toPromise()
                 .then(res => <ShippingCompanyModel[]> res.data)
