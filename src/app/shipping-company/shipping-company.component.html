@@ -1,4 +1,5 @@
-<div class="card">
+<p-fieldset legend="Header"  [toggleable]="true">
+    <div class="card">
   <h5>Manage Shipping Companies</h5>
   <div class="p-fluid">
       <div class="p-field p-grid">
@@ -7,13 +8,27 @@
               <input id="firstname4" type="text" pInputText>
           </div>
       </div>
-      <!-- <div class="p-field p-grid">
-          <label for="lastname4" class="p-col-12 p-mb-2 p-md-2 p-mb-md-0">Lastname</label>
-          <div class="p-col-12 p-md-10">
-              <input id="lastname4" type="text" pInputText>
-          </div>
-      </div> -->
+
   </div>
   <br>
   <button pButton type="button" label="Save" ></button>
 </div>
+</p-fieldset>
+<br>
+<p-panel header="shipping Companies list">
+ <p-table [value]="shippingCompanies">
+  <ng-template pTemplate="header">
+      <tr>
+          <th>Id</th>
+          <th>Name</th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-ShippingCompanyModel>
+      <tr>
+          <td>{{ShippingCompanyModel.id}}</td>
+          <td>{{ShippingCompanyModel.name}}</td>
+      </tr>
+  </ng-template>
+</p-table> 
+
+</p-panel>

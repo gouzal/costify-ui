@@ -11,7 +11,7 @@ export class ShippingCompanyService {
   getShippingCompanies() {
     return this.http.get('/src/data/shippingcompanies.json')
                 .toPromise()
-                .then(res => <ShippingCompanyModel[]> res.data)
+                .then(res => <ShippingCompanyModel[]> res)
                 .then(data => { return data; });
 }
 }
