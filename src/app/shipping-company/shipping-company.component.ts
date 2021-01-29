@@ -12,13 +12,20 @@ export class ShippingCompanyComponent implements OnInit {
   constructor(private shippingCompanyService :ShippingCompanyService) { }
 
   ngOnInit(): void {
-    //this.shippingCompanies = this.shippingCompanyService.getShippingCompanies();
-    for (let i = 1; i < 10; i++) {
-      this.shippingCompanies.push({
-        id: i,
-        name: 'name' + i,
-      });
+    this.shippingCompanyService.getShippingCompanies().subscribe(shippingCompanies => 
+    {
+      this.shippingCompanies = shippingCompanies;
     }
+    );
+    
+    //this.shippingCompanies = this.shippingCompanyService.getShippingCompanies();
+    
+    // for (let i = 1; i < 10; i++) {
+    //   this.shippingCompanies.push({
+    //     id: i,
+    //     name: 'name' + i,
+    //   });
+    // }
   }
 
 }
