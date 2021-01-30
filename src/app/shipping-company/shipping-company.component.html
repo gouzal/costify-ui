@@ -27,7 +27,13 @@
   <ng-template pTemplate="header">
       <tr>
           <th>Id</th>
-          <th>Name</th>
+          <th pSortableColumn="name">
+            <div class="p-d-flex p-jc-between p-ai-center">
+                Name
+                <p-sortIcon field="name"></p-sortIcon>
+                <p-columnFilter type="text" field="name" display="menu" class="p-ml-auto"></p-columnFilter>
+            </div>
+        </th>
       </tr>
   </ng-template>
   <ng-template pTemplate="body" let-ShippingCompanyModel>
