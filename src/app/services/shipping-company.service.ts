@@ -13,9 +13,9 @@ export class ShippingCompanyService {
     //             .toPromise()
     //             .then(res => <ShippingCompanyModel[]> res)
     //             .then(data => { return data; });
-    
+
         // return this.http.get<any[]>(`${this.apiUrl}${params}`);
-        return this.http.get<any[]>(`/data/shippingcompanies.json`);
+        return this.http.get<any[]>(`assets/data/shippingcompanies.json`);
 
 }
 }
